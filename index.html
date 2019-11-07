@@ -28,13 +28,16 @@
 			 </form>
 		</div>
 
-		<div class="views-tools">
-			<div class="head">
+		<div class="views-tools ">
+			<div class="head ">
 				<span class="views">ID</span>
 				<span class="views">Designation</span>
 				<span class="views">Number of time used</span>
 				<span class="views">State (In/Out)</span>
+				<span class="views">Delete</span>
 			</div>
+
+			<div class="list-tool-item" ></div>
 		</div>
 
 	</div>
@@ -49,13 +52,41 @@
 				<input class='add' type="text" id='staff-post' placeholder="Add staff post" required>
 				<input class='add' type="email" id='staff-email' placeholder="Add staff email" required>
 				<input class='add' type="text" id='staff-phone' placeholder="Add staff Phone" required>
-				<!--<button id='stock-form-btn'>Add Product to Stock</button>-->
+				
 				<input type="submit" value="Add new staff" id='staff-form-btn' >
 			 </form>
 		</div>
 
-		<div class="views-staff">
+		<div class="views-staff ">
 			<div class="head">
+				<span class="views">ID</span>
+				<span class="views">Name</span>
+				<span class="views">Post</span>
+				<span class="views">E-mail</span>
+				<span class="views">Phone</span>
+			</div>
+		</div>
+
+	</div>
+
+<!-- -------------------------------------------movement----------------------------------------------->
+<!----------------------------------------------------------------------------------------------------->
+
+	<div class="movement">
+		<div class="add-movement">
+			 <form  action="JavaScript:createMovement()"  class="form">
+				<input class='add' type="text" id='movement-staff-id' placeholder="Add staff ID" required>
+				<input class='add' type="text" id='movement-tool-id' placeholder="Add tool name" required>
+			<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter-->
+				<input type="submit" value="Add new movement" id='movement-form-btn' >
+			 </form>
+		</div>
+
+		<div class="views-staff divTable">
+			<div class="slide-filter">
+				
+			</div>
+			<div class="head divRow">
 				<span class="views">ID</span>
 				<span class="views">Name</span>
 				<span class="views">Post</span>

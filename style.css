@@ -13,22 +13,29 @@ body {
 .nav{
 	background-color: #D67BA8;
 }
-.head{
+
+.views-tools{
+	width: 70vw;
+}
+
+.tool-item {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid black;
-	padding: 20px;
-	height: 20px;
-	width: 700px;
-}
-.tool-item, .staff-item{
-	display: flex;
-	justify-content: space-between;
-	width: 700px;
-}
-.tool-item>span, .staff-item>span, .head>span {
-	width: 70px;
-	display: flex;
-	justify-content: space-between;
 	
+}
+
+.tool-item>span, .head >span{
+	width:150px;
+	margin-bottom: 5px;
+}
+
+
+.head {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	background-color: #CCC;
+	height: 50px;
+	width: 70vw;
 }

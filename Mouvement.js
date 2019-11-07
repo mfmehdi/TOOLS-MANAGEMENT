@@ -1,12 +1,12 @@
-var mouvementList=[];
+var movementList=[];
 	
-	function Mouvement(idTools,idStaff,mouvementState){
+	function Movement(idTools,idStaff,movementState){
 		return{
 			idTools:idTools,
 			idStaff:idStaff,
 			dateOut:"",
 			dateIn:"",
-			mouvementState:mouvementState,
+			movementState:movementState,
 
 			getIdTools:getIdTools,
 			getIdStaff:getIdStaff,
@@ -35,7 +35,9 @@ var mouvementList=[];
      		return this.dateIn;
      }
 
-
+     function addMovement(obj){
+     	movementList.push(obj);
+    }
 
 	function giveTools(dateOut){
 		toolsList[this.idTools].setState();  //
@@ -48,7 +50,7 @@ var mouvementList=[];
 	}
 
 	function filterBy(criterion,param){
-			return mouvementList.filter((element)=>{
+			return movementList.filter((element)=>{
 				return element[param]===criterion;
 			})
 	}

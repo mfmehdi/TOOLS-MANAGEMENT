@@ -1,16 +1,14 @@
 
 function listingTools(){
-$(".tool-item").html('')
-
+$(".list-tool-item").html('')
 	toolsList.forEach(function(tool,i){
-	var div=$('<div class="tool-item" id="'+i+'"><div/>')	
+	var div= $('<div class="tool-item " id="'+i+'"></div>')	
 	
 		div.append(
-                `
-                  <span>`+tool.getId()+`</span>
-                  <span>`+tool.getDesignation()+`</span>
-                  <span>`+tool.getNbTimeUsed()+`</span>
-                  <span>`+tool.getState()+`</span>` );
+                 ` <span views>`+tool.getId()+`</span>
+                  <span views>`+tool.getDesignation()+`</span>
+                  <span views>`+tool.getNbTimeUsed()+`</span>
+                  <span views>`+tool.getState()+`</span>` );
 
 		var delButton = $('<button>Delete</button>');
 		delButton.on("click",function(){
@@ -19,7 +17,9 @@ $(".tool-item").html('')
 		})
 
 		div.append(delButton)
-		$(".views-tools").append(div);
+		$(".list-tool-item").append(div)
+		
+		
 		})
 
 
