@@ -1,20 +1,25 @@
 var staffList=[]
 
-function Staff(name, phone, email, job){
+function Staff(id, name, phone, email, job, phone){
 	return {
+		id:id,
 		name:name,
 		phone:phone,
 		email:email,
 		job:job,
-
+		
+		getId:getId,
 		getName: getName,
 		getPhone: getPhone,
 		getEmail: getEmail,
 		getJob: getJob,
+		getPhone:getPhone
 	};
 }
 
-
+function getId(){
+	return this.id;
+}
 function getName(){
 	return this.name;
 }
@@ -28,7 +33,7 @@ function getEmail(){
 }
 
 function getJob(){
-	return this.company;
+	return this.job;
 }
 
 function addStaff(obj){

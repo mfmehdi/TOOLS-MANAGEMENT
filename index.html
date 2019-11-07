@@ -2,13 +2,16 @@
 <html>
 <head>
 	<title>Tools Management</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
 
 <header>
 	<div class="nav">
-			<span></span>
+			<span><div class="nav-btn" id="btn-tools">Tools</div></span>
+			<span><div class="nav-btn">Staff</div></span>
+			<span><div class="nav-btn">Mouvement</div></span>
 	</div>
 
 </header>
@@ -17,19 +20,52 @@
 
 	<div class="tools">
 		<div class="add-tool">
-			 <form  action="JavaScript:"  class="form">
-				<input class='in' type="text" id='tool-name' placeholder="Add tool name" required>
-				<input class='in' type="text" id='tool-designation' placeholder="Add designation" required>
+			 <form  action="JavaScript:createTools()"  class="form">
+				<input class='add' type="text" id='tool-id' placeholder="Add tool ID" required>
+				<input class='add' type="text" id='tool-designation' placeholder="Add tool designation" required>
 				<!--<button id='stock-form-btn'>Add Product to Stock</button>-->
 				<input type="submit" value="Add new tools" id='tool-form-btn' >
 			 </form>
 		</div>
 
 		<div class="views-tools">
-			
+			<div class="head">
+				<span class="views">ID</span>
+				<span class="views">Designation</span>
+				<span class="views">Number of time used</span>
+				<span class="views">State (In/Out)</span>
+			</div>
 		</div>
 
 	</div>
+
+<!-- -----------------------------------------------Staff---------------------------------------------->
+<!----------------------------------------------------------------------------------------------------->
+<div class="staff">
+		<div class="add-staff">
+			 <form  action="JavaScript:createStaff()"  class="form">
+				<input class='add' type="text" id='staff-id' placeholder="Add staff ID" required>
+				<input class='add' type="text" id='staff-name' placeholder="Add staff name" required>
+				<input class='add' type="text" id='staff-post' placeholder="Add staff post" required>
+				<input class='add' type="email" id='staff-email' placeholder="Add staff email" required>
+				<input class='add' type="text" id='staff-phone' placeholder="Add staff Phone" required>
+				<!--<button id='stock-form-btn'>Add Product to Stock</button>-->
+				<input type="submit" value="Add new staff" id='staff-form-btn' >
+			 </form>
+		</div>
+
+		<div class="views-staff">
+			<div class="head">
+				<span class="views">ID</span>
+				<span class="views">Name</span>
+				<span class="views">Post</span>
+				<span class="views">E-mail</span>
+				<span class="views">Phone</span>
+			</div>
+		</div>
+
+	</div>
+
 </div>
 
 <script
@@ -37,8 +73,14 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="Tools.js"></script>
+<script type="text/javascript" src="add-tools.js"></script>
+<script type="text/javascript" src="view-tools.js"></script>
+<script type="text/javascript" src="Staff.js"></script>
+<script type="text/javascript" src="add-staff.js"></script>
+<script type="text/javascript" src="view-staff.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
-<script type="text/javascript"></script>
 
 </body>
 </html>

@@ -1,15 +1,27 @@
 var toolsList=[];
 
-	function Tools(designation){
+	function Tools(id,designation){
 
 		return {
+			id:id,
 			designation:designation,
-			nbTimeUsed:nbTimeUsed,
-			state:state,
+			nbTimeUsed:0,
+			state:false,
 
+			getId:getId,
 			setState:setState,
-			setNbTimeUsed:setNbTimeUsed
+			getState:getState,
+
+			setNbTimeUsed:setNbTimeUsed,
+			getNbTimeUsed:getNbTimeUsed,
+
+			getDesignation:getDesignation
 		}
+	}
+
+	function getId()
+	{
+		return this.id;
 	}
 
 	function getDesignation()
@@ -17,14 +29,20 @@ var toolsList=[];
 		return this.designation;
 	}
 
-	function getDesignation()
+	function getNbTimeUsed()
 	{
 		return this.nbTimeUsed;
 	}
 
-	function addTools(obj){
-			toolsList.push(obj);
+	function getState()
+	{
+		if(this.state){
+			return "Out"
+		}
+		return "In"
 	}
+
+
 
 	function setState(){
 		this.state=!this.state;
@@ -32,4 +50,11 @@ var toolsList=[];
 
 	function setNbTimeUsed(){
 		this.nbTimeUsed+=1;
+	}
+
+		function addTools(obj){
+			toolsList.push(obj);
+	}
+	function removeTool(){
+		toolsList.remove(thiss)
 	}

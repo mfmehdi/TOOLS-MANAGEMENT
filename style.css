@@ -1,0 +1,34 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #EFD3B5;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	
+}
+
+.nav{
+	background-color: #D67BA8;
+}
+.head{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding: 20px;
+	height: 20px;
+	width: 700px;
+}
+.tool-item, .staff-item{
+	display: flex;
+	justify-content: space-between;
+	width: 700px;
+}
+.tool-item>span, .staff-item>span, .head>span {
+	width: 70px;
+	display: flex;
+	justify-content: space-between;
+	
+}
