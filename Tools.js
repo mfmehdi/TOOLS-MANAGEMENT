@@ -1,4 +1,9 @@
-var toolsList=[];
+var toolsList=[Tools("123","cutting pliers",false),
+				Tools("7854896","saw blade",false),
+				Tools("78999","blade",false)
+
+			];
+
 
 	function Tools(id,designation){
 
@@ -11,9 +16,12 @@ var toolsList=[];
 			getId:getId,
 			setState:setState,
 			getState:getState,
+			getDisplayState:getDisplayState,
 
 			setNbTimeUsed:setNbTimeUsed,
 			getNbTimeUsed:getNbTimeUsed,
+
+			
 
 			getDesignation:getDesignation
 		}
@@ -53,7 +61,7 @@ var toolsList=[];
 	}
 
 	function setNbTimeUsed(){
-		this.nbTimeUsed+=1;
+		this.nbTimeUsed=this.nbTimeUsed+1;
 	}
 
 		function addTools(obj){

@@ -1,11 +1,11 @@
 
 function listingStaffs(){
-$(".staff-item").html('')
+$(".list-staff-item").html('')
 
 	staffList.forEach(function(staff,i){
 	var div=$('<div class="staff-item " ></div>')	
 		div.append(
-                `  <span>`+staff.getId()+`</span>
+                ` <span>`+staff.getId()+`</span>
                   <span>`+staff.getName()+`</span>
                   <span>`+staff.getJob()+`</span>
                   <span>`+staff.getEmail()+`</span>
@@ -19,9 +19,7 @@ $(".staff-item").html('')
 
 		div.append(delButton)
 		$(".views-staff").append(div);
+		$(".list-staff-item").append(div)
 		})
-
-
-
-
+     
 }

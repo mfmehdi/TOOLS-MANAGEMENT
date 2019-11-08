@@ -40,16 +40,19 @@ var movementList=[];
      }
 
    
-
 	function giveTools(dateOut){
 		toolsList[getIndexToolsByID(this.idTools)].setState();  //
 		this.dateOut=dateOut;
+		this.dateIn="            "
 		this.movementState="out"
+
 	}
 
 	function getBackTools(dateIn){
 		toolsList[getIndexToolsByID(this.idTools)].setState();
+		toolsList[getIndexToolsByID(this.idTools)].setNbTimeUsed();
 		this.dateIn=dateIn;
+		this.dateOut="              "
 		this.movementState="in"
 	}
 
@@ -58,7 +61,6 @@ var movementList=[];
 				return element[param]===criterion;
 			})
 	}
-
 
   function addMovement(obj){
      	movementList.push(obj);

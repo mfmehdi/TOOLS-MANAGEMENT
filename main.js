@@ -5,7 +5,7 @@ $("#btn-tools").on("click",()=>{
 $(".staff").slideUp("slow");
 $(".movement").slideUp("slow");
 $(".tools").slideDown("slow");
-	listingTools
+	listingTools()
 
 });
 
@@ -15,7 +15,7 @@ $("#btn-staff").on("click",()=>{
 $(".tools").slideUp("slow");
 $(".movement").slideUp("slow");
 $(".staff").slideDown("slow");
-	listingStaff
+	listingStaffs()
 });
 
 
@@ -23,5 +23,5 @@ $("#btn-movement").on("click",()=>{
 $(".tools").slideUp("slow");
 $(".staff").slideUp("slow");
 $(".movement").slideDown("slow");
-	listingStaff
+	listingMovements()
 });

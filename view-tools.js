@@ -8,7 +8,7 @@ $(".list-tool-item").html('')
                  `<span views>`+tool.getId()+`</span>
                   <span views>`+tool.getDesignation()+`</span>
                   <span views>`+tool.getNbTimeUsed()+`</span>
-                  <span views>`+tool.getState()+`</span>` );
+                  <span views>`+tool.getDisplayState()+`</span>` );
 
 		var delButton = $('<button>Delete</button>');
 		delButton.on("click",function(){
