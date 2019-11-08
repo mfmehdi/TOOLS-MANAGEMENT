@@ -39,3 +39,17 @@ function getJob(){
 function addStaff(obj){
 	staffList.push(obj);
 }
+
+  	function filterByIdStaff(str){
+			return staffList.filter((element)=>{
+				return element.id.startsWith(str);
+
+			})
+	}
+
+function searchById(id){
+	return staffList.filter((element)=>{
+		return element.id===id;
+	})[0];
+	
+}

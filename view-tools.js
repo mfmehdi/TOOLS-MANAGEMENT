@@ -5,7 +5,7 @@ $(".list-tool-item").html('')
 	var div= $('<div class="tool-item " id="'+i+'"></div>')	
 	
 		div.append(
-                 ` <span views>`+tool.getId()+`</span>
+                 `<span views>`+tool.getId()+`</span>
                   <span views>`+tool.getDesignation()+`</span>
                   <span views>`+tool.getNbTimeUsed()+`</span>
                   <span views>`+tool.getState()+`</span>` );
@@ -18,7 +18,6 @@ $(".list-tool-item").html('')
 
 		div.append(delButton)
 		$(".list-tool-item").append(div)
-		
 		
 		})
 

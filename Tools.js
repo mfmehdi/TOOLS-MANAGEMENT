@@ -34,12 +34,16 @@ var toolsList=[];
 		return this.nbTimeUsed;
 	}
 
-	function getState()
+	function getDisplayState()
 	{
 		if(this.state){
 			return "Out"
 		}
 		return "In"
+	}
+	function getState()
+	{
+		return this.state;
 	}
 
 
@@ -58,3 +62,21 @@ var toolsList=[];
 	function removeTool(){
 		toolsList.remove(thiss)
 	}
+  //*****************************************
+  	function filterByIdTools(str){
+			return toolsList.filter((element)=>{
+				return element.id.startsWith(str);
+
+			})
+	}
+	function searchByIdTool(id){
+	return toolsList.filter((element)=>{
+		return element.id===id;
+	})[0];
+}
+	function getIndexToolsByID(id){
+			
+			return toolsList.indexOf(searchByIdTool(id))
+	}
+
+	

@@ -75,24 +75,42 @@
 	<div class="movement">
 		<div class="add-movement">
 			 <form  action="JavaScript:createMovement()"  class="form">
-				<input class='add' type="text" id='movement-staff-id' placeholder="Add staff ID" required>
-				<input class='add' type="text" id='movement-tool-id' placeholder="Add tool name" required>
+
+             <div class="searchDivMovement">
+				<div class="dropdown">
+                  <input type="text" placeholder="Search by id Staff..." id='movement-staff-id' autocomplete="off"  >								
+				  <div id="myDropdownStaff" class="dropdown-content">
+				    <!--jquery-dropdown-->
+				  </div>
+			</div>
+
+
+				<div class="dropdown">
+                  <input type="text" placeholder="Search by id Tools..." id='movement-tool-id' autocomplete="off"   >								
+				  <div id="myDropdownTool" class="dropdown-content">
+				    <!--jquery-dropdown-->
+				  </div>
+				</div>
+			</div>
+				<!--<input class='add' type="text" id='movement-tool-id' placeholder="Add tool name" required>-->
 			<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter-->
 				<input type="submit" value="Add new movement" id='movement-form-btn' >
 			 </form>
 		</div>
 
-		<div class="views-staff divTable">
+		<div class="views-movement ">
 			<div class="slide-filter">
 				
 			</div>
-			<div class="head divRow">
-				<span class="views">ID</span>
-				<span class="views">Name</span>
-				<span class="views">Post</span>
-				<span class="views">E-mail</span>
-				<span class="views">Phone</span>
+			<div class="head ">
+				<span class="views">Id Staff</span>
+				<span class="views">Name Staff</span>
+				<span class="views">Id tool</span>
+				<span class="views">Date out</span>
+				<span class="views">Date in</span>
+				<span class="views">Movement</span>
 			</div>
+			<div class="list-movoment-item"></div>
 		</div>
 
 	</div>
@@ -110,6 +128,10 @@
 <script type="text/javascript" src="Staff.js"></script>
 <script type="text/javascript" src="add-staff.js"></script>
 <script type="text/javascript" src="view-staff.js"></script>
+<script type="text/javascript" src="Movement.js"></script>
+<script type="text/javascript" src="add-movement.js"></script>
+<script type="text/javascript" src="view-movement.js"></script>
+<script type="text/javascript" src="dropdown.js"></script>
 <script type="text/javascript" src="main.js"></script>
 
 

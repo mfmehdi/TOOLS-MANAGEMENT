@@ -1,17 +1,18 @@
 var movementList=[];
 	
-	function Movement(idTools,idStaff,movementState){
+	function Movement(idTools,idStaff){
 		return{
 			idTools:idTools,
 			idStaff:idStaff,
 			dateOut:"",
 			dateIn:"",
-			movementState:movementState,
+			movementState:"out",
 
 			getIdTools:getIdTools,
 			getIdStaff:getIdStaff,
 			getDateOut:getDateOut,
 			getDateIn:getDateIn,
+			getMovementState:getMovementState,
 
 			giveTools:giveTools,
 			getBackTools:getBackTools,
@@ -34,19 +35,22 @@ var movementList=[];
      function getDateIn(){
      		return this.dateIn;
      }
+     function getMovementState(){
+     	return this.movementState;
+     }
 
-     function addMovement(obj){
-     	movementList.push(obj);
-    }
+   
 
 	function giveTools(dateOut){
-		toolsList[this.idTools].setState();  //
+		toolsList[getIndexToolsByID(this.idTools)].setState();  //
 		this.dateOut=dateOut;
+		this.movementState="out"
 	}
 
 	function getBackTools(dateIn){
-		toolsList[this.idTools].setState();
+		toolsList[getIndexToolsByID(this.idTools)].setState();
 		this.dateIn=dateIn;
+		this.movementState="in"
 	}
 
 	function filterBy(criterion,param){
@@ -54,5 +58,10 @@ var movementList=[];
 				return element[param]===criterion;
 			})
 	}
+
+
+  function addMovement(obj){
+     	movementList.push(obj);
+    }
 
 
