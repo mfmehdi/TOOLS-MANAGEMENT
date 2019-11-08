@@ -1,32 +1,91 @@
 body {
 	padding: 0;
-	margin: 0;
-	background-color: #EFD3B5;
+	margin: 20px;
+	
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
 	align-content: center;
+	background-image: url("tools-background.jpg");
+}
+
+
+/***********NAV******************/
+.nav{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 40vw;
+}
+
+.nav-btn{
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	border-radius: 100%;
+	height: 100px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-btn:active {
+    font-weight: bold;
+}
+.nav-btn:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    box-shadow: 0 0 20px -1px rgba(0,0,0,2);
+    font-weight: bold;
+    cursor: grab;
+}
+/*************************************/
+/**************MAIN*********************/
+.main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/*background-color: #443737;*/
+	 opacity: 80%;
+	height: 500px;
+	width:1000px;
+}
+
+.divs-main{
+	 opacity: 100%;
+	height: 30vw;
+	width:800px;
+	border-radius: 5%;
+	background-color: #443737;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin: 0px;
 	
 }
-
-.nav{
-	background-color: #D67BA8;
+/****************************************/
+.views-tools,.views-staff{
+	width: 50vw;
 }
 
-.views-tools{
-	width: 70vw;
-}
-
-.tool-item {
+.tool-item,.staff-item ,.movement-item{
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid black;
+	margin:20px;
+}
+.tool-item>span, .staff-item>span, .movement-item>span {
+	width:70px;
+	color: white;
+	font-weight: bold;
+	width:150px;
+	margin-bottom: 5px;
 	
 }
-
-.tool-item>span, .head >span{
-	width:150px;
+.head >span{
+	width:70px;
 	margin-bottom: 5px;
 }
 
@@ -37,7 +96,11 @@ body {
 	border-bottom: 1px solid black;
 	background-color: #CCC;
 	height: 50px;
-	width: 70vw;
+	/*;width: 50vw;*/
+	margin:20px;
+}
+.form{
+	margin-left: 20px;
 }
 
 /*************************/
