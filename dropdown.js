@@ -46,7 +46,7 @@ $("#movement-staff-id").keyup(function(){
 })
 
 $("#movement-tool-id").keyup(function(){
-console.log(filterByIdTools($("#movement-tool-id").val()))
+
    showDivTool(filterByIdTools($("#movement-tool-id").val()))
 
 })

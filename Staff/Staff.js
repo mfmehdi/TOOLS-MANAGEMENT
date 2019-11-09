@@ -1,6 +1,6 @@
-var staffList=[Staff("2100","Davy Yari","748492","davyyari@gmail.com","asistance"),
-			   Staff("21888","Davy Yari","748492","davyyari@gmail.com","asistance"),
-			    Staff("2150","Davy Yari","748492","davyyari@gmail.com","asistance")
+var staffList=[Staff("2100","josef Batani","748492","josef@gmail.com","welder"),
+			   Staff("21888","Davy Yari","748492","Davy@gmail.com","boiler"),
+			    Staff("2150","Alexandre Yasni","748492","Alexandre@gmail.com","mechanic")
 ]
 
 function Staff(id, name, phone, email, job, phone){

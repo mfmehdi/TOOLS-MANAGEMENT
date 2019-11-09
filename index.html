@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
+
 <body>
 
 <header>
@@ -17,8 +18,9 @@
 </header>
 
 <div class="main">
-
+<div class="title">Tools Manegement</div>
 	<div class="tools divs-main">
+		<h1>Tools</h1>
 		<div class="add-tool">
 			 <form  action="JavaScript:createTools()"  class="form">
 				<input class='add' type="text" id='tool-id' placeholder="Add tool ID" required>
@@ -45,6 +47,7 @@
 <!-- -----------------------------------------------Staff---------------------------------------------->
 <!----------------------------------------------------------------------------------------------------->
 <div class="staff divs-main">
+	<h1>Staff</h1>
 		<div class="add-staff">
 			 <form  action="JavaScript:createStaff()"  class="form">
 				<input class='add' type="text" id='staff-id' placeholder="Add staff ID" required>
@@ -74,6 +77,7 @@
 <!----------------------------------------------------------------------------------------------------->
 
 	<div class="movement divs-main">
+		<h1>Movements</h1>
 		<div class="add-movement">
 			 <form  action="JavaScript:createMovement()"  class="form">
 
@@ -83,7 +87,7 @@
 				  <div id="myDropdownStaff" class="dropdown-content">
 				    <!--jquery-dropdown-->
 				  </div>
-			</div>
+			    </div>
 
 
 				<div class="dropdown">
@@ -93,16 +97,17 @@
 				  </div>
 				</div>
 			</div>
-				<!--<input class='add' type="text" id='movement-tool-id' placeholder="Add tool name" required>-->
-			<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter-->
+			
 				<input type="submit" value="Add new movement" id='movement-form-btn' >
 			 </form>
 		</div>
 
-		<div class="views-movement ">
-
-			<div class="slide-filter">
-				
+		<div class="views-movement">
+			<div class="slide-filter">Filter</div>
+			<div class="filter">
+				<input type="text" calsss="filter_text" id="filter_staff" placeholder="Filter by Id Staff">
+				<input type="text" class="filter_text" id="filter_tool" placeholder=	"Filter by Id Tools">
+				<input type="text" class="filter_text" id="filter_mov" placeholder=	"Filter by Movement">
 			</div>
 
 			<div class="head ">
@@ -126,17 +131,17 @@
   crossorigin="anonymous"></script>
 
 
-<script type="text/javascript" src="Tools.js"></script>
-<script type="text/javascript" src="add-tools.js"></script>
-<script type="text/javascript" src="view-tools.js"></script>
+<script type="text/javascript" src="Tools/Tools.js"></script>
+<script type="text/javascript" src="tools/add-tools.js"></script>
+<script type="text/javascript" src="Tools/view-tools.js"></script>
 
-<script type="text/javascript" src="Staff.js"></script>
-<script type="text/javascript" src="add-staff.js"></script>
-<script type="text/javascript" src="view-staff.js"></script>
+<script type="text/javascript" src="Staff/Staff.js"></script>
+<script type="text/javascript" src="Staff/add-staff.js"></script>
+<script type="text/javascript" src="Staff/view-staff.js"></script>
 
-<script type="text/javascript" src="Movement.js"></script>
-<script type="text/javascript" src="add-movement.js"></script>
-<script type="text/javascript" src="view-movement.js"></script>
+<script type="text/javascript" src="Movements/Movement.js"></script>
+<script type="text/javascript" src="Movements/add-movement.js"></script>
+<script type="text/javascript" src="Movements/view-movement.js"></script>
 
 <script type="text/javascript" src="dropdown.js"></script>
 <script type="text/javascript" src="main.js"></script>

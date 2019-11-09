@@ -20,6 +20,7 @@ function createMovement(){
    
 //************************************
 		addMovement(mov)
+		arrayFilter=[...movementList];
 		
 		listingMovements();					
 }

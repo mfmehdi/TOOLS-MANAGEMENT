@@ -16,7 +16,7 @@ var movementList=[];
 
 			giveTools:giveTools,
 			getBackTools:getBackTools,
-			filterBy:filterBy
+			filterMovementBy:filterMovementBy
 			
 		}
 
@@ -56,9 +56,12 @@ var movementList=[];
 		this.movementState="in"
 	}
 
-	function filterBy(criterion,param){
-			return movementList.filter((element)=>{
-				return element[param]===criterion;
+	function filterMovementBy(param,criterion,arrayFilter){
+		if(arguments[2]===undefined){arrayFilter=[...movementList]}
+			console.log(arrayFilter)
+		return arrayFilter.filter((element)=>{
+
+				return element[param].startsWith(criterion);
 			})
 	}
 
